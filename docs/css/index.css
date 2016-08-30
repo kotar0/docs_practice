@@ -1,3 +1,8 @@
+@charset "UTF-8";
+body {
+  font-family: "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+}
+
 .sidemenu {
   background-color: #eeeeee;
   box-sizing: border-box;
@@ -18,10 +23,26 @@
 }
 
 .items__listitem {
-  display: block;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #979797;
   height: 70px;
   width: 100%;
+}
+
+.items__listitem__link {
+  color: #000;
+  display: block;
+  text-decoration: none;
+  height: 70px;
+  width: 100%;
+}
+
+.items__listitem__link h1 {
+  padding-top: 19px;
+  font-size: 14px;
+}
+
+.items__listitem__link time {
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=maps/index.css.map */

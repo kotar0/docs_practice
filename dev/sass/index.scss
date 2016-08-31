@@ -6,8 +6,10 @@ font-family:"Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシ
 background-color: #eeeeee;
 box-sizing: border-box;
 padding: 25px 0px 0px 36px;
+position: fixed;
 height: 100vw;
 width: 261px;
+overflow: scroll;
 }
 
 .search{
@@ -19,6 +21,7 @@ width: 261px;
 .items{
   margin-top: 25px;
   width: 225px;
+  overflow: scroll;
 }
 
 .items__listitem{
@@ -40,4 +43,19 @@ width: 261px;
   time{
     font-size: 12px;
   }
+}
+
+.main{
+  margin-left: 261px;
+}
+
+.docTitle{
+  padding: 86px 60px 0px 60px;
+  h1{
+    font-size:36px;
+  }
+}
+
+.docBody{
+  padding: 64px 130px 0px 90px;
 }

@@ -4,7 +4,6 @@ body {
 }
 
 .sidemenu {
-  background-color: #eeeeee;
   box-sizing: border-box;
   padding: 25px 0px 0px 36px;
   position: fixed;
@@ -16,7 +15,19 @@ body {
 .search {
   height: 36px;
   width: 225px;
-  background-color: green;
+}
+
+.search__input {
+  padding: 0;
+  border: solid 1px #000;
+  border-radius: 30px;
+  width: 98%;
+  height: 100%;
+}
+
+.search__input:focus {
+  outline: none;
+  border: solid 1px #20b2aa;
 }
 
 .items {
@@ -61,6 +72,7 @@ body {
 }
 
 .docBody {
+  line-height: 1.6em;
   padding: 64px 130px 0px 90px;
 }
 

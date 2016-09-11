@@ -1,73 +1,81 @@
-body{
-font-family:"Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+body {
+    font-family: "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
 }
 
-.sidemenu{
-//background-color: #eeeeee;
-box-sizing: border-box;
-padding: 25px 0px 0px 36px;
-position: fixed;
-height: 100vw;
-width: 261px;
-overflow: scroll;
+.sidemenu {
+    //background-color: #eeeeee;
+    box-sizing: border-box;
+    padding: 25px 0 0 36px;
+    position: fixed;
+    height: 100vw;
+    width: 261px;
+    overflow: scroll;
 }
 
-.search{
-  height: 36px;
-  width: 225px;
+.search {
+    height: 36px;
+    width: 225px;
 }
 
-.search__input{
-  padding: 0;
-  border:solid 1px #000;
-border-radius: 30px;
-  width: 98%;
-  height: 100%;
-  &:focus {
-    outline:none;
-   border:solid 1px #20b2aa;
-}
-}
-
-.items{
-  margin-top: 25px;
-  width: 225px;
-  overflow: scroll;
+.search__input {
+    box-sizing: border-box;
+    padding: 0;
+    padding-left: 15px;
+    font-size: 16px;
+    border: solid 1px #000;
+    border-radius: 30px;
+    width: 98%;
+    height: 100%;
+    &:focus {
+        outline: none;
+        border: solid 1px #20b2aa;
+    }
 }
 
-.items__listitem{
-  border-bottom: 1px solid #979797;
-  height: 70px;
-  width: 100%;
+.items {
+    margin-top: 25px;
+    width: 225px;
+    overflow: scroll;
 }
 
-.items__listitem__link{
-  color: #000;
-  display:block;
-  text-decoration: none;
-  height: 70px;
-  width: 100%;
-  h1{
-    padding-top: 19px;
-    font-size: 14px;
-  }
-  time{
-    font-size: 12px;
-  }
+.items__listitem {
+    border-bottom: 1px solid #979797;
+    height: 70px;
+    width: 100%;
 }
 
-.main{
-  margin-left: 261px;
+.items__listitem__link {
+    color: #000;
+    display: block;
+    text-decoration: none;
+    height: 70px;
+    width: 100%;
+    h1 {
+        padding-top: 9px;
+        font-size: 16px;
+    }
+    time {
+display: block;
+padding-top: 24px;
+padding-right: 10px;
+text-align: right;
+        font-size: 12px;
+    }
 }
 
-.docTitle{
-  padding: 86px 60px 0px 60px;
-  h1{
-    font-size:36px;
-  }
+.main {
+    margin-left: 261px;
 }
 
-.docBody{
-  line-height: 1.6em;
-  padding: 64px 130px 0px 90px;
+.docTitle {
+    padding: 86px 60px 0;
+
+    h1 {
+        font-size: 36px;
+    }
+}
+
+.docBody {
+    line-height: 1.6em;
+    padding: 40px 130px 0 60px;
 }

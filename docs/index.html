@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Docs</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Docs</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
-  <aside>
-    <div class="sidemenu">
-      <div class="search">
-        <input type="text" class="search__input">
-      </div>
-      <div class="items">
-        <ul>
-          <li class="items__listitem"><a class="items__listitem__link" href="#"><h1>title</h1><time>2016/10/1 10:10 Tue</time></a></li>
-        </ul>
-      </div>
+    <aside>
+        <div class="sidemenu">
+            <div class="search">
+                <input type="text" class="search__input">
+            </div>
+            <div class="items">
+                <ul>
+                    <li class="items__listitem"><a class="items__listitem__link" href="#"><h1>This is list title This is </h1><time>2016/10/1 10:10 Tue</time></a></li>
+                </ul>
+            </div>
 
-    </div>
-  </aside>
-  <section>
-    <div class="main">
-      <div class="docTitle">
-        <h1>title</h1>
-      </div>
-      <article>
-        <div class="docBody">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
         </div>
-      </article>
-    </div>
+    </aside>
+    <section>
+        <div class="main">
+            <div class="docTitle">
+                <h1>Here is title place.</h1>
+            </div>
+            <article>
+                <div class="docBody">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </article>
+        </div>
 
-  </sction>
-  <script  type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript">
-(function(){
-var listitem = $('ul').html();
-for(var i=0;i<20;i++){
-  $('ul').append(listitem);
-}
-})()
-</script>
+        </sction>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                var listitem = $('ul').html();
+                for (var i = 0; i < 20; i++) {
+                    $('ul').append(listitem);
+                }
+                $('.docBody p').on('click', function() {
+                    $(this).attr('contenteditable', 'true');
+                })
+            })()
+        </script>
 </body>
+
 </html>

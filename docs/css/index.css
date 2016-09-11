@@ -5,7 +5,7 @@ body {
 
 .sidemenu {
   box-sizing: border-box;
-  padding: 25px 0px 0px 36px;
+  padding: 25px 0 0 36px;
   position: fixed;
   height: 100vw;
   width: 261px;
@@ -18,7 +18,10 @@ body {
 }
 
 .search__input {
+  box-sizing: border-box;
   padding: 0;
+  padding-left: 15px;
+  font-size: 16px;
   border: solid 1px #000;
   border-radius: 30px;
   width: 98%;
@@ -51,11 +54,15 @@ body {
 }
 
 .items__listitem__link h1 {
-  padding-top: 19px;
-  font-size: 14px;
+  padding-top: 9px;
+  font-size: 16px;
 }
 
 .items__listitem__link time {
+  display: block;
+  padding-top: 24px;
+  padding-right: 10px;
+  text-align: right;
   font-size: 12px;
 }
 
@@ -64,7 +71,7 @@ body {
 }
 
 .docTitle {
-  padding: 86px 60px 0px 60px;
+  padding: 86px 60px 0;
 }
 
 .docTitle h1 {
@@ -73,7 +80,7 @@ body {
 
 .docBody {
   line-height: 1.6em;
-  padding: 64px 130px 0px 90px;
+  padding: 40px 130px 0 60px;
 }
 
 /*# sourceMappingURL=maps/index.css.map */

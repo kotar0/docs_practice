@@ -19,13 +19,13 @@ body {
 
 .search__input {
     box-sizing: border-box;
-    padding: 0;
-    padding-left: 15px;
+    padding: 0 0 0 15px;
     font-size: 16px;
     border: solid 1px #000;
     border-radius: 30px;
     width: 98%;
     height: 100%;
+
     &:focus {
         outline: none;
         border: solid 1px #20b2aa;
@@ -45,20 +45,28 @@ body {
 }
 
 .items__listitem__link {
+    position: relative;
     color: #000;
     display: block;
     text-decoration: none;
     height: 70px;
     width: 100%;
+
     h1 {
         padding-top: 9px;
         font-size: 16px;
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
+
     time {
-display: block;
-padding-top: 24px;
-padding-right: 10px;
-text-align: right;
+        display: block;
+        position: absolute;
+        bottom: 7px;
+        right: 10px;
+        text-align: right;
         font-size: 12px;
     }
 }

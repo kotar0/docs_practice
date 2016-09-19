@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 var obj = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
 console.log(obj.no1.title);
 
-app.get('/getjson',function(req,res){
+app.get('/getjson', function (req, res) {
   var objget = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
   res.json(objget.no1);
 });

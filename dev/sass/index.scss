@@ -80,10 +80,16 @@ body {
 
     h1 {
         font-size: 36px;
+      &:focus{
+        outline: none;
+      }
     }
 }
 
 .docBody {
     line-height: 1.6em;
     padding: 40px 130px 0 60px;
+  p:focus{
+        outline: none;
+      }
 }

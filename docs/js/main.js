@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  //クリックでcontenteditableを追加
+  $('.docBody p,.docTitle h1').on('click', function () {
+    $(this).attr('contenteditable', 'true');
+  });
+
 
   $.ajax({
     type: 'GET',

@@ -83,9 +83,17 @@ body {
   font-size: 36px;
 }
 
+.docTitle h1:focus {
+  outline: none;
+}
+
 .docBody {
   line-height: 1.6em;
   padding: 40px 130px 0 60px;
+}
+
+.docBody p:focus {
+  outline: none;
 }
 
 /*# sourceMappingURL=maps/index.css.map */

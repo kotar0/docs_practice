@@ -17,12 +17,12 @@ app.get('/getjson', function (req, res) {
 
 app.post('/save', function (req, res) {
   var bodydata = req.body.docbody;
-  var titledata = req.body.doctitle;
+  //var titledata = req.body.doctitle;
   console.log(bodydata);
 
   var data = {
     no1: {
-      "title": titledata,
+      "title": 'titledata',
       "body": bodydata
     }
   };

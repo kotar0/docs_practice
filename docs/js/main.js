@@ -13,17 +13,18 @@ $(document).ready(function () {
     success: function (data) {
       $('.docBody').children('p').html(data.body);
       $('.docTitle').children('h1').html(data.title)
-      //console.log('FROM SEVER: ' + data.body);
+        //console.log('FROM SEVER: ' + data.body);
     }
   });
 
 
   //Get body keyup event
-  $(document).on('keyup', '.docTitle,.docBody', function () {
-    var bodydata = $('.docBody p').html();
-    var titledata = $('.docTitle h1').html();
-    console.log(titledata);
-    $.ajax({
+  $(".docBody").on('keyup', 'p', function () {
+    var bodydata = $(this).html();
+    //var titledata = $('.docTitle h1').html();
+
+    sendPost('docbody', bodydata);
+    /*$.ajax({
       type: 'POST',
       url: 'http://localhost:8080/save',
       dataType: 'json',
@@ -38,9 +39,24 @@ $(document).ready(function () {
       }
 
     });
-    //Get html of body
-    //POST to sever
+    */
 
+
+    function sendPost(a, b) {
+      var senddata = {};
+      senddata[a] = b;
+      $.ajax({
+        type: 'POST',
+        url: 'http://localhost:8080/save',
+        dataType: 'json',
+        contentType: 'application/json',
+        data: JSON.stringify(senddata),
+        success: function (data) {
+          //var body = JSON.stringify(data);;
+          console.log('Success!');
+        }
+      });
+    };
   });
 
 });

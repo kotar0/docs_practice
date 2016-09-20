@@ -8,7 +8,6 @@ app.use(express.static('docs'));
 app.use(bodyParser.json());
 
 var obj = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
-console.log(obj.no1.title);
 
 app.get('/getjson', function (req, res) {
   var objget = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
@@ -17,14 +16,14 @@ app.get('/getjson', function (req, res) {
 
 
 app.post('/save', function (req, res) {
-  var textdata = req.body.inputdata;
-  console.log(textdata);
-  res.json(textdata);
+  var bodydata = req.body.docbody;
+  var titledata = req.body.doctitle;
+  console.log(bodydata);
 
   var data = {
     no1: {
-      "title": obj.no1.title,
-      "body": textdata
+      "title": titledata,
+      "body": bodydata
     }
   };
   fs.writeFile('data.json', JSON.stringify(data, null, '    '));

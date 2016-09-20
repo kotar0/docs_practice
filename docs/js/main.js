@@ -12,26 +12,29 @@ $(document).ready(function () {
     contentType: 'application/json',
     success: function (data) {
       $('.docBody').children('p').html(data.body);
+      $('.docTitle').children('h1').html(data.title)
       //console.log('FROM SEVER: ' + data.body);
     }
-
   });
 
 
   //Get body keyup event
-  $('.docBody').on('keyup', 'p', function () {
-    var bodydata = $(this).html();
+  $(document).on('keyup', '.docTitle,.docBody', function () {
+    var bodydata = $('.docBody p').html();
+    var titledata = $('.docTitle h1').html();
+    console.log(titledata);
     $.ajax({
       type: 'POST',
       url: 'http://localhost:8080/save',
       dataType: 'json',
       contentType: 'application/json',
       data: JSON.stringify({
-        inputdata: bodydata
+        doctitle:titledata,
+        docbody: bodydata
       }),
       success: function (data) {
         //var body = JSON.stringify(data);;
-        console.log('FROM SEVER: ' + data);
+        console.log('FROM SEVER: ');
       }
 
     });
